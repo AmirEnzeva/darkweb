@@ -33,8 +33,13 @@ menuitems.forEach(function(menuitem) {
         event.preventDefault();
         removeClass('menu-item--active')
         menuitem.classList.add('menu-item--active')
-        let activedSection = $.querySelector('.menu-item--active');
-        console.log(activedSection.getAttribute('data-section'));
+        let sectionclass = $.querySelector('.menu-item--active').getAttribute('data-section');
+        let sectionTopOffset = $.querySelector(`.${sectionclass}`).offsetTop;
+
+        window.scroll({
+            top: sectionTopOffset - 125,
+            behavior: "smooth"
+        })
 
     })
 })
