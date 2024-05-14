@@ -130,20 +130,22 @@ body{
     margin-right: 4rem;
     font-size: 1.3rem;
     font-family: "Poppins Medium";
+    text-transform: ;
+}
+.menu-item--active{
+    color: var(--primrey-color);    
 }
 .menu-item:last-child{
     margin-right: 0;
 }
 .menu-link{
-    color: var(--text-color);
+    color: inherit;
     transition: color 150ms ease-in;
 }
 .menu-link:hover{
     color: var(--primrey-color);
 }
-.menu-link--active{
-    color: var(--primrey-color);    
-}
+
 .mobile-nav-icon{
     display: none;
     width: 5rem;
