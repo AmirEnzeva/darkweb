@@ -6,6 +6,7 @@ let cover = $.querySelector('.cover');
 let resumeListItems = $.querySelectorAll('.resume-list__item')
 let protfolioListItems = $.querySelectorAll('.portfolio-list__item')
 let menuitems = $.querySelectorAll('.menu-item')
+let sections = $.querySelectorAll("main > section")
 
 function navTap(listItems,elementActiveClass,elementOpenClass) {
     listItems.forEach(function(listItem){  
@@ -42,4 +43,24 @@ menuitems.forEach(function(menuitem) {
         })
 
     })
+})
+
+let observer = new IntersectionObserver(observerHandler,{
+    threshold: 0.5
+});
+
+function observerHandler(allsection){
+    let onSection;
+    allsection.map(function(section){
+        let sectionclassName = section.target.className
+        if (section.isIntersecting) {
+           $.querySelector(`.menu-item[data-section=${sectionclassName}]`).classList.add('menu-item--active')
+        }
+        else{
+            $.querySelector(`.menu-item[data-section=${sectionclassName}]`).classList.remove('menu-item--active')
+        }
+    })
+}
+sections.forEach(function(section){
+    observer.observe(section)
 })
