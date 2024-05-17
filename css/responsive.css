@@ -29,7 +29,7 @@
         align-items: center;
     }
     .home__links-wrapper{
-
+        
         align-items: center;
         justify-content: center;
     }
@@ -40,6 +40,9 @@
     }
     .home{
         background-image: none;
+    }
+    .header__wave{
+        display: none;
     }
     .about-us{
         flex-direction: column;
