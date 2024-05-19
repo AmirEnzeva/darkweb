@@ -82,3 +82,18 @@ if (window.localStorage.getItem('theme') === 'dark') {
     $.documentElement.classList = 'dark'
     themeChanger.innerHTML = lightThmeIcon;
 }
+const swiper = new Swiper('.swiper',{
+    spaceBetween: 30,   
+    pagination: {   
+        el: '.swiper-pagination',
+    },
+    breakpoints:{
+        768 : {
+            slidesPerView: 2,
+        },
+        1200 : {
+            slidesPerView: 3,
+        },
+    }
+
+});     
