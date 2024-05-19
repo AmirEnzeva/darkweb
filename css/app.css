@@ -790,7 +790,12 @@ body{
     fill: var(--app-bg-color);
     border-radius: 10rem;
     transition: all 0.2s ease-in;
+
 }
+#sun{
+    fill: #fff;
+}
+
 .facebook:hover{
     background-color: #0866FF;
 }
